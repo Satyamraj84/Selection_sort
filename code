@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+//code
+int main(int argc, char const *argv[])
+{
+    int A[30], size;
+    cout << "Enter the size of Array : " << endl;
+    cin >> size;
+    cout << "Enter Elements : " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin >> A[i];
+    }
+
+    cout << "Before Sorting : ";
+    Print_Array(A, size);
+    // Selection_Sort(A, size);
+    Selection(A, size);
+    cout << endl
+         << "After Sorting : ";
+    Print_Array(A, size);
+    return 0;
+}
