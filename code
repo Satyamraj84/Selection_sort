@@ -1,7 +1,35 @@
 #include <iostream>
 using namespace std;
 
-//code
+void Selection(int A[], int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        int min = i;
+        for (int j = i + 1; j < size; j++)
+        {
+            if (A[min] > A[j])
+            {
+                min = j;
+            }
+        }
+        if (min != i)
+        {
+            int temp = A[i];
+            A[i] = A[min];
+            A[min] = temp;
+        }
+    }
+}
+
+// For Printing the Array
+void Print_Array(int A[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << A[i] << "\t";
+    }
+}
 int main(int argc, char const *argv[])
 {
     int A[30], size;
